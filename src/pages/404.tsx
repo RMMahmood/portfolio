@@ -1,54 +1,27 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import * as React from "react";
+import styled from "styled-components";
+import Page from "../components/Page";
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
+const Content = styled.div`
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgba(255, 255, 255, .05);  
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+`;
 
-const paragraphStyles = {
-  marginBottom: 48,
+export default function NotFoundPage() {
+    return (
+        <Page title="Page Not Found">
+            <Content>
+                <h1>Page Not Found</h1>
+                <h2>The page you requested does not exist</h2>
+            </Content>
+        </Page>
+    )
 }
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-
-// markup
-const NotFoundPage = () => {
-  return (
-    <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
-  )
-}
-
-export default NotFoundPage
