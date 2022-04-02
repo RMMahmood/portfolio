@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
-import styled from "styled-components";
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+import Background from "./Background";
 
 const Style = createGlobalStyle`
     body {
@@ -38,6 +38,7 @@ export default function Page({ title, children }: { title: string; children?: Re
                 <title>{title} | Raza Mahmood</title>
             </Helmet>
             <Style />
+            <Background />
             <PageWrapper>
                 <BodyWrapper>{children}</BodyWrapper>
             </PageWrapper>
