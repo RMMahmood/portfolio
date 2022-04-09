@@ -2,6 +2,7 @@ import * as React from "react";
 import { Helmet } from "react-helmet";
 import styled, { createGlobalStyle } from "styled-components";
 import Background from "./Background";
+import Header from "./Header";
 
 const Style = createGlobalStyle`
     body {
@@ -21,13 +22,15 @@ const PageWrapper = styled.div`
     flex-direction: column;
     position: relative;
     min-height: 100vh;
-    max-width: 1500px;
-    margin: 0 auto 0 auto;
 `;
 
 const BodyWrapper = styled.main`
+    display: flex;
+    flex-direction: column;
     position: relative;
     flex: 1 1 auto;
+    max-width: 1500px;
+    margin: 0 auto;
 `;
 
 export default function Page({ title, children }: { title: string; children?: React.ReactNode; }) {
@@ -40,6 +43,7 @@ export default function Page({ title, children }: { title: string; children?: Re
             <Style />
             <Background />
             <PageWrapper>
+                <Header />
                 <BodyWrapper>{children}</BodyWrapper>
             </PageWrapper>
         </React.Fragment>
