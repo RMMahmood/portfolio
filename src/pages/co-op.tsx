@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 export default function IndexPage() {
     return (
-        <Page title="Co-op Work">
+        <Page title="Co-op">
 
         </Page>
     )

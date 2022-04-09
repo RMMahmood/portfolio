@@ -15,7 +15,16 @@ const HeaderWrapper = styled.header`
     padding: 0 20px;
 `;
 
-const HomeLink = styled(InternalLink)`
+const HeaderLink = styled(InternalLink)`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+`;
+
+const HomeLink = styled(HeaderLink)`
     margin-right: auto;
     font-size: 25px;
 `;
@@ -30,6 +39,7 @@ export default class Header extends React.PureComponent<{}, {}> {
                 <HomeLink to="/">
                     <FontAwesomeIcon icon={faHouse}></FontAwesomeIcon>
                 </HomeLink>
+                <HeaderLink to="/co-op">Co-op Experience</HeaderLink>
             </HeaderWrapper>
         )
     }

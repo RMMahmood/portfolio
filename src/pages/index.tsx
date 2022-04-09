@@ -4,7 +4,7 @@ import styled from "styled-components";
 import ExternalLink from "../components/ExternalLink";
 import { StaticImage } from "gatsby-plugin-image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedin, faGitlab } from '@fortawesome/free-brands-svg-icons'
 
 const Card = styled.div`
     display: flex;
@@ -49,6 +49,9 @@ export default function IndexPage() {
                 <SocialLinks>
                     <ExternalLink aria-label="Github" href="https://github.com/RMMahmood">
                         <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
+                    </ExternalLink>
+                    <ExternalLink aria-label="Gitlab" href="https://gitlab.com/RMMahmood">
+                        <FontAwesomeIcon icon={faGitlab}></FontAwesomeIcon>
                     </ExternalLink>
                     <ExternalLink aria-label="LinkedIn" href="https://www.linkedin.com/in/rmmahmood/">
                         <FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>
