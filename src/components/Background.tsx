@@ -55,7 +55,7 @@ class Bubble extends React.PureComponent<{}, CSSProperties> {
             width: `${size}px`,
             backgroundColor: `rgb(${randomInt(0, 256)}, ${randomInt(0, 256)}, ${randomInt(0, 256)})`,
             left: `calc(${random(0, 100)}% - ${size}px)`,
-            animationDelay: `${random(0, 20)}s`,
+            animationDelay: `${random(-20, 0)}s`,
             animationDuration: `${random(10, 30)}s`,
             animationDirection: (randomInt(1, 2) == 2) ? 'reverse' : 'normal',
             opacity: randomInt(10, 60) / 100
