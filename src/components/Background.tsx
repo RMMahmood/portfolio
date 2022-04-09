@@ -33,7 +33,6 @@ const Container = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    filter: blur(20px); 
     z-index: 0;
 `;
 
@@ -56,10 +55,10 @@ class Bubble extends React.PureComponent<{}, CSSProperties> {
             width: `${size}px`,
             backgroundColor: `rgb(${randomInt(0, 256)}, ${randomInt(0, 256)}, ${randomInt(0, 256)})`,
             left: `calc(${random(0, 100)}% - ${size}px)`,
-            animationDelay: `${random(0, 5)}s`,
-            animationDuration: `${random(10, 20)}s`,
+            animationDelay: `${random(0, 20)}s`,
+            animationDuration: `${random(10, 30)}s`,
             animationDirection: (randomInt(1, 2) == 2) ? 'reverse' : 'normal',
-            opacity: randomInt(20, 70) / 100
+            opacity: randomInt(10, 60) / 100
         };
     }
     animationIteration() {
@@ -70,7 +69,7 @@ class Bubble extends React.PureComponent<{}, CSSProperties> {
             width: `${size}px`,
             backgroundColor: `rgb(${randomInt(0, 256)}, ${randomInt(0, 256)}, ${randomInt(0, 256)})`,
             left: `calc(${random(0, 100)}% - ${size}px)`,
-            opacity: randomInt(20, 70) / 100,
+            opacity: randomInt(10, 60) / 100,
         });
     }
     render() {
