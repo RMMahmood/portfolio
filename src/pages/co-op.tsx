@@ -4,29 +4,22 @@ import styled from "styled-components";
 import { graphql, useStaticQuery } from "gatsby";
 
 const TermWrapper = styled.div`
-    padding: 30px;
+    padding: 20px 30px;
     background-color: rgba(31,31,31,0.750);
     backdrop-filter: blur(50px);
     margin: 50px 0;
 `;
 
-function TermGoal({ text }: { text: string }) {
-    return (
-        <div>
-            <p>{text}</p>
-        </div>
-    )
-}
-
 function Term({ data }: { data: any }) {
     const goals = data.goals.map((text: any, index: number) => (
-        <TermGoal key={index} text={text} />
+        <p key={index}>{text}</p>
     ));
 
     return (
         <TermWrapper>
             <h1>Workterm {data.term} - {data.job.title}</h1>
             <h2>{data.employer.name}</h2>
+            <hr />
 
             <h3>Introduction</h3>
             <p>{data.introduction}</p>
@@ -35,9 +28,7 @@ function Term({ data }: { data: any }) {
             <p>{data.job.description}</p>
 
             <h3>Workterm Goals</h3>
-            <div>
-                {goals}
-            </div>
+            <div>{goals}</div>
 
             <h3>Conclusions and Acknowledgments</h3>
             <p>{data.conclusion}</p>
