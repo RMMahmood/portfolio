@@ -12,6 +12,18 @@ const Style = createGlobalStyle`
         font-family: 'Roboto';
     }
 
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #191919;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
     * {
         box-sizing: border-box;
     }
