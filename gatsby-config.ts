@@ -32,7 +32,15 @@ const config: GatsbyConfig = {
       options: {
         icon: "./src/images/icon.png"
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-gatsby-cloud`,
+      options: {
+        allPageHeaders: [
+          "Strict-Transport-Security: max-age=86400; includeSubDomains",
+        ],
+      },
+    },
   ]
 };
 
