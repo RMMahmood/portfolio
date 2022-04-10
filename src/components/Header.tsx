@@ -13,6 +13,7 @@ const HeaderWrapper = styled.header`
     height: 60px;
     width: 100%;
     padding: 0 20px;
+    z-index: 1;
 `;
 
 const HeaderLink = styled(InternalLink)`
