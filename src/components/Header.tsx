@@ -37,7 +37,7 @@ export default class Header extends React.PureComponent<{}, {}> {
     render() {
         return (
             <HeaderWrapper>
-                <HomeLink to="/">
+                <HomeLink to="/" aria-label="Home Page">
                     <FontAwesomeIcon icon={faHouse}></FontAwesomeIcon>
                 </HomeLink>
                 <HeaderLink to="/co-op">Co-op Experience</HeaderLink>

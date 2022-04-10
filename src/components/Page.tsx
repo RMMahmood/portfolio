@@ -3,13 +3,14 @@ import { Helmet } from "react-helmet";
 import styled, { createGlobalStyle } from "styled-components";
 import Background from "./Background";
 import Header from "./Header";
+import "@fontsource/roboto";
 
 const Style = createGlobalStyle`
     body {
         color: white;
         background-color: #121212;
         margin: 0;
-        font-family: 'Roboto';
+        font-family: 'Roboto', sans-serif;
     }
 
     ::-webkit-scrollbar {
@@ -48,8 +49,7 @@ const BodyWrapper = styled.main`
 export default function Page({ title, children }: { title: string; children?: React.ReactNode; }) {
     return (
         <React.Fragment>
-            <Helmet>
-                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+            <Helmet htmlAttributes={{ lang: 'en' }}>
                 <title>{title} | Raza Mahmood</title>
             </Helmet>
             <Style />
