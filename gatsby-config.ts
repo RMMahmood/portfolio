@@ -2,8 +2,8 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: ``,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `Raza Mahmood Portfolio`,
+    siteUrl: `https://www.razamahmood.com`
   },
   plugins: [
     "gatsby-plugin-styled-components",
@@ -12,13 +12,20 @@ const config: GatsbyConfig = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-fontawesome-css",
+    "gatsby-transformer-json",
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         "name": "images",
         "path": "./src/images/"
-      },
-      __key: "images"
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "data",
+        "path": "./src/data/"
+      }
     },
     {
       resolve: "gatsby-plugin-manifest",
